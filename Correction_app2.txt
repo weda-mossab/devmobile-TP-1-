@@ -1,0 +1,32 @@
+class Student(){
+    
+    var name: String 
+    var isGraduated: Boolean 
+    private var password: String? = null
+    
+    init{
+        this.name = ""
+        this.isGraduated = false
+    }
+    fun getPassword():String ?  {
+        return this.password
+    }
+    
+    fun setPassword(newPass:String){
+        this.password=newPass
+        println("password updated")
+    }
+}
+
+ 
+
+
+fun main(args: Array<String>) {
+    
+    val student = Student()
+    student.name = "Erwan"
+    println("Hello student, your name is : ${student.name} ")
+    println("Your graduation status : ${student.isGraduated} ")
+    student.setPassword("123456")
+    println("your password is : ${student?.getPassword()}")
+}
